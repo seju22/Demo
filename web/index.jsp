@@ -46,10 +46,9 @@
 	<link rel="stylesheet" type="text/css" href="Accets/css/table.css">
 	
        <link rel="stylesheet" type="text/css" href="Accets/css/style.css" />
-       <script src="Accets/js/modernizr.custom.63321.js"></script> 
+       <!--<script src="Accets/js/modernizr.custom.63321.js"></script>--> 
   
     
-
   </head>
 
     <body class="image-background" bg-image="images/bg6.jpg">
@@ -81,13 +80,13 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right dark-nav" id="menu">
-<!--              <li class="active" data-menuanchor="1stPage"><a href="#1stPage" class="active">Objective</a></li>
+              <li class="active" data-menuanchor="1stPage"><a href="#1stPage" class="active">Home</a></li>
               <li data-menuanchor="2ndPage">
-			 <a href="#2ndPage">Database</a> 
+			 <a href="#2ndPage">Graph</a> 
 			  </li>
 			  <li class="active" data-menuanchor="3rdPage">
-			  <a href="#3rdPage" class="active">DBList</a></li>-->
-              <!-- <li data-menuanchor="5thPage"><a href="#5thPage">Contact</a></li> -->
+			  <a href="#3rdPage">Add Result</a></li>
+               <li data-menuanchor="4thPage"><a href="#4thPage">DB Result </a></li> 
             </ul>
           </div>
         </div>
@@ -135,11 +134,11 @@
               <div class="col-md-10 col-md-offset-1">
 
                 <div class="about-section section-title title">
-                  <h1 class="text-center">For DB to store data</h1>
+                  <h1 class="text-center">Graph</h1>
                   <p class="text-center"></p>
 				  <ul>
-					<li>2 options we can try - (a) have single table to feed data for all applications transactions or (b) have different tables for different applications</li>
-					<li>Db tables can be something like this - so as said in point (1)- either have below table application wise or (2) if we are going to have single table, applications transactions will be added as column as we add more appps and more transactions.</li>
+					<li>Graph Will Be Added Soon</li>
+<!--					<li>Db tables can be something like this - so as said in point (1)- either have below table application wise or (2) if we are going to have single table, applications transactions will be added as column as we add more appps and more transactions.</li>-->
 				  </ul>
 				  
 				  
@@ -149,17 +148,17 @@
               </div><!-- End col -->
             </div><!-- End row -->
 
-           <div class="row">
+<!--           <div class="row">
               <div class="col-md-10 col-md-offset-1" style="padding-top:50px">
 
                 <div class="about-section section-title title">
                  <div class="widget blank no-padding">
 								<div class="panel panel-default work-progress-table" >
-									  <!-- Default panel contents -->
-									<div class="panel-heading">DB Table</i>
+									   Default panel contents 
+									<div class="panel-heading">DB Table
 										
 									</div>
-									  <!-- Table -->
+									   Table 
 									<table id="mytable" class="table" >
 										<thead>
 										  <tr>
@@ -197,14 +196,14 @@
 				</div>
 
               </div>
-            </div> 
+            </div> -->
           </div>
         </div>
       
 </div>
 	  
 	  <!---- Form ------------------------------------------------------------>
-	      <div class="section about dark-image" id="section2">
+	      <div class="section about dark-image" id="section3">
         <div class="container">
           <div class="common-container">
             <div class="row">
@@ -241,42 +240,34 @@
                 aisle1=d1.getAisle();
                 }
             %>
-            <input type="hidden" name="id" value="<%=ID%>"/>
+            
+                <div id="main1">
+		<nav class="codrops-demos" style="margin-top: 20px;">
+				  
+					<input value="BGW" type="button" id="bgw"/>
+                                        <input value="IVAPP" type="button" id="ivapp"/>
+                                        <input value="SNM" type="button" id="snm"/>
+                                        <input value="IPSM" type="button" id="ipsm"/>
+				</nav>
+                    <div id="main2" style="display:none">
+                    
+                    <div class="col-md-4">
+                        <label>Application :</label> 
+                    <input type="text" name="name" id="appId" value="<%=name1%>" placeholder="application name" />
+                      <input value="Add Result" type="button" id="add"/>
+                    </div>
+                  
+                    </div>
+                </div>
+                
+                <div id="main3" style="display:none">
+                    <input id="dbId" type="hidden" name="id" value="<%=ID%>"/>
 		<p class="text" style="float: right; padding-right: 140px;"><label for="first">Rel.Month</label>
 			<input type="text" name="month" value="<%=month1%>" placeholder="yyyy" size="15" value="" />
 		</p>
 		<p class="text" style="float: right; padding-right: 40px;" ><label for="last">Date</label>
 			<input type="text" name="date" value="<%=date1%>" placeholder="mm-dd-yyyy" size="15" value=""/>
 		</p>
-		
-<!--		
-		<nav class="codrops-demos" style="margin-top: 20px;">
-				  
-					<a href="#index.jsp"><button>BGW</button></a>			
-					<a href="#index.jsp"><button>IVAPP</button></a>
-					<a href="#index.jsp"><button>SNM</button></a>
-					<a href="#index.jsp"><button>IPSM</button></a>
-				</nav>-->
-				<p class="float" style="margin-top: 20px; padding-left: 140px;">
-						<label for="Application Name"></label>
-                                                Application : 
-                                                <select name="name"  >                                                                                                                                        
-							
-							  <option value="Choose" hidden><%=name1%></option>
-                                                          <option value="BGW"name="name">BGW</option>
-							  <option value="IVAPP"name="name">IVAPP</option>
-							  <option value="SNM"name="name">SNM</option>
-							  <option value="IPSM"name="name">IPSM</option>
-						</select>
-                                                        
-				</p>
-                               
-
-
-            <div class="row">
-			
-				
-				<!-- <a href="#"><button>Add Result</button></a> -->
 
                 <div class="col-lg-8 col-lg-offset-2">
 
@@ -321,7 +312,7 @@
                                 <div class="col-md-6 form ">
                                     <div class="form-group">
                                         
-                                       <input type="text" name="equipment" value="<%=equipment1%>" placeholder="yyyy" class="form-control" size="20" value="" />
+                                       <input type="text" name="equipment" value="<%=equipment1%>" class="form-control" size="20" value="" />
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
@@ -397,8 +388,21 @@
 
               <!-- End col -->
             </div><!-- End row -->
-<div class="row">
-              <div class="col-md-10 col-md-offset-1" style="padding-top:50px">
+
+           
+          </div>
+        </div>
+      
+</div>
+	  
+	    <!-- End section -->
+<div class="section contact dark-image" id="section4">
+        <div class="container">
+          <div class="common-container contact-container">
+            
+
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1" style="padding-top:50px;margin-left: 2.333333%;">
 
                 <div class="about-section section-title title">
                  <div class="widget blank no-padding">
@@ -412,15 +416,15 @@
 										<thead>
 										  <tr>
 											
-					<th>Id</th>						
-                                        <th style="width:20%">Date</th>
-                                        <th style="width:10%">Month</th>
-					<th style="width:10%">Name</th>
-                                        <th style="width:15%">Equipment</th>
-                                        <th style="width:15%">Add aisle page</th>
-                                        <th style="width:15%">Load rack details</th>
-                                        <th style="width:15%">path</th>
-                                        <th style="width:15%">Action</th>
+					<!--<th>Id</th>-->				
+                                        <th style="width:7%">Rel.Month</th>
+                                        <th style="width:10%">Test Date</th>
+					<th style="width:14%">Transaction Name</th>
+                                        <th style="width:20%">Open_Equipment Page</th>
+                                        <th style="width:19%">Open_Add Aisle Page</th>
+                                        <th style="width:20%">Load Rack Details</th>
+                                        <th style="width:10%">Select Path</th>
+                                        <th style="width:10%">Action</th>
 										  </tr>
 										</thead>
 										<tbody> 
@@ -451,10 +455,10 @@
                         details=d.getDetails();
                                    %>
             <tr>
-                <td><%=id%></td>
-                <td><%=date%></td>
-                <td><%=month%></td>     
-                 <td><%=name%></td>   
+<!--            <td><%=id%></td>-->
+                <td><%=month%></td>  
+                <td><%=date%></td>                  
+                <td><%=name%></td>   
                 <td><%=equipment%></td>
                 <td><%=aisle%></td>
                 <td><%=details%></td>
@@ -475,14 +479,9 @@
 
               </div>
             </div>
-           
-          </div>
-        </div>
-      
-</div>
-	  
-	    <!-- End section -->
-
+          </div><!-- End common-container -->
+        </div><!-- End container -->
+      </div><!-- End section -->
 
      
 
@@ -537,7 +536,7 @@
     <script type="text/javascript" src="Accets/js/parsley.min.js"></script>
 
     <!-- custom script -->
-    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="Accets/js/custom.js"></script>
 	 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 	 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script type="text/javascript">
@@ -572,11 +571,83 @@
 		</script>
 		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="validator.js"></script>
+        
+       <script>
+           $("#bgw").click(function () {
+                                $("#main2").show();
+                                $("#main3").hide();
+                                var path1 = $("#bgw").val().replace(/C:\\fakepath\\/i, '');
+                                $("#appId").val(path1);
+                                var path1 = $("#dbId").val().replace(/C:\\fakepath\\/i, '');
+                                if (path1 != 0) {
+                                   $("#main1").show();
+                                    $("#main2").show();
+                                    $("#main3").show(); 
+                                }
+                                
+			});
+           
+              $("#ivapp").click(function(){
+                $("#main2").show();
+                                $("#main3").hide();
+                                var path1 = $("#ivapp").val().replace(/C:\\fakepath\\/i, '');
+                                $("#appId").val(path1);
+                                var path1 = $("#dbId").val().replace(/C:\\fakepath\\/i, '');
+                                if (path1 != 0) {
+                                   $("#main1").show();
+                                    $("#main2").show();
+                                    $("#main3").show(); 
+                                }
+            })
+             $("#snm").click(function(){
+                $("#main2").show();
+                                $("#main3").hide();
+                                var path1 = $("#snm").val().replace(/C:\\fakepath\\/i, '');
+                                $("#appId").val(path1);
+                                var path1 = $("#dbId").val().replace(/C:\\fakepath\\/i, '');
+                                if (path1 != 0) {
+                                   $("#main1").show();
+                                    $("#main2").show();
+                                    $("#main3").show(); 
+                                }
+            })
+             $("#ipsm").click(function(){
+                $("#main2").show();
+                                $("#main3").hide();
+                                var path1 = $("#ipsm").val().replace(/C:\\fakepath\\/i, '');
+                                $("#appId").val(path1);
+                                var path1 = $("#dbId").val().replace(/C:\\fakepath\\/i, '');
+                                if (path1 != 0) {
+                                   $("#main1").show();
+                                    $("#main2").show();
+                                    $("#main3").show(); 
+                                }
+            })
+             $("#add").click(function(){
+                $("#main3").show();
+            })
+           
+       </script>
+       <script>
+           $(document).ready(function(){
+               var path1 = $("#dbId").val().replace(/C:\\fakepath\\/i, '');
+           if (path1 == 0) { //undefined will yield false
+            //call a method! .val() not .val
+//                alert("ID is not there!!");
+                $("#main1").show();
+                $("#main2").hide();
+                $("#main3").hide();
+            } 
+            else if (path1 != 0) { 
+//                alert("ID is there!!");
+                $("#main1").show();
+                $("#main2").show();
+                $("#main3").show();
+            }
+         });
+           
+       </script>
+        <script src="Accets/validator.js"></script>
         <script src="Accets/contact.js"></script>
   </body>
-  
-
-
-<!-- Mirrored from zoyothemes.com/tripaco/layouts/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Nov 2016 10:18:58 GMT -->
 </html>
