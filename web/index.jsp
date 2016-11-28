@@ -23,7 +23,21 @@
     <link rel="shortcut icon" href="images/favicon.ico">
 
     <title>Title</title>
-
+    
+    
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css">
+<!--<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css">
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>-->
+<script type="text/javascript" src="Accets/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="Accets/js/bootstrap.min.js"></script>
+<!--<script type="text" src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>-->
+ <script type="text/javascript" src="Accets/js/jquery-datatable.js"></script>
+ <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+ 
+ 
+ 
+ 
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Josefin+Sans:400,600,700" rel="stylesheet">
 
@@ -49,6 +63,82 @@
        <!--<script src="Accets/js/modernizr.custom.63321.js"></script>--> 
   
     
+       <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />-->
+   
+         <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />-->
+<!--<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js"></script>-->
+
+<!--<script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>-->
+       <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+       <!--<script type="text" src="https://code.jquery.com/jquery-1.10.2.js"></script>-->
+       
+       <!--<script type="text" src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>-->
+       
+       <!--<script  type="text" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>-->
+    
+    <script>
+        $(document).ready(function() {
+        $('#example').DataTable();
+        } );
+    </script>
+    
+    <!--            graph      -->
+    	<!--<link rel="stylesheet" href="assets/bootstrap/bootstrap4-alpha3.min.css">-->
+    
+    
+    <style>
+			body {
+				background-color: #fafafa;
+				font-size: 16px;
+				line-height: 1.5;
+			}
+			
+			h1,h2,h3,h4,h5,h6 {
+				font-weight: 400;	
+			}
+			
+			#header {
+				border-bottom: 5px solid #37474F;
+				color: #37474F;
+				margin-bottom: 1.5rem;
+				padding: 1rem 0;
+			}
+			
+			#revenue-tag {
+				font-weight: inherit !important;
+				border-radius: 0px !important;
+			}
+			
+			.card {
+				border: 0rem;
+				border-radius: 0rem;
+			}
+			
+			.card-header {
+				background-color: #37474F;
+				border-radius: 0 !important;
+				color:	white;
+				margin-bottom: 0;
+				padding:	1rem;
+			}
+			
+			.card-block {
+				border: 1px solid #cccccc;	
+			}
+			
+			.shadow {
+				box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+										0 1px 18px 0 rgba(0, 0, 0, 0.12),
+										0 3px 5px -1px rgba(0, 0, 0, 0.2);
+			}
+			
+			#revenue-column-chart, #products-revenue-pie-chart, #orders-spline-chart {
+				height: 300px;
+				width: 100%;
+			}			
+		</style>
+                		<!-- Scripts -->
+		
   </head>
 
     <body class="image-background" bg-image="images/bg6.jpg">
@@ -64,7 +154,7 @@
     <!-- End Preloader -->
 
     <header class="header">
-      <nav class="navbar navbar-custom">
+      <nav class="navbar navbar-custom" style="float:left !important">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <!-- <div class="navbar-header">
@@ -134,16 +224,27 @@
               <div class="col-md-10 col-md-offset-1">
 
                 <div class="about-section section-title title">
-                  <h1 class="text-center">Graph</h1>
-                  <p class="text-center"></p>
-				  <ul>
-					<li>Graph Will Be Added Soon</li>
-<!--					<li>Db tables can be something like this - so as said in point (1)- either have below table application wise or (2) if we are going to have single table, applications transactions will be added as column as we add more appps and more transactions.</li>-->
-				  </ul>
-				  
-				  
+                  <h1 class="text-center">Graph</h1>	  
                 </div>
-		
+		<div class="container">
+<!--			<h2 id="header">
+				<strong>Annual Sales</strong>
+				<small class="text-muted">Jan 2015 - Dec 2015</small>
+			</h2>-->
+			
+			<div class="row m-b-1">
+				
+
+				<div class="col-lg-10">
+						<div class="card shadow">
+						<h4 class="card-header">Graphical Representation of Transactions</h4>
+						<div class="card-block">
+							<div id="products-revenue-pie-chart"></div>
+						</div>
+					</div>
+				</div>
+			</div> <!-- row -->
+		</div> <!-- container -->
 
               </div><!-- End col -->
             </div><!-- End row -->
@@ -412,17 +513,18 @@
 										
 									</div>
 									  <!-- Table -->
-									<table id="mytable" class="table" >
+									<!--<table id="mytable" class="table" >-->
+                            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">                                   
 										<thead>
 										  <tr>
 											
 					<!--<th>Id</th>-->				
                                         <th style="width:7%">Rel.Month</th>
-                                        <th style="width:10%">Test Date</th>
+                                        <th style="width:12%">Test Date</th>
 					<th style="width:14%">Transaction Name</th>
                                         <th style="width:20%">Open_Equipment Page</th>
                                         <th style="width:19%">Open_Add Aisle Page</th>
-                                        <th style="width:20%">Load Rack Details</th>
+                                        <th style="width:17%">Load Rack Details</th>
                                         <th style="width:10%">Select Path</th>
                                         <th style="width:10%">Action</th>
 										  </tr>
@@ -504,9 +606,27 @@
     </footer>
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="Accets/js/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="Accets/js/bootstrap.min.js"></script>
-
+    
+    <script>
+        $(document).ready(function() {
+    var dataTable = $('#example').dataTable({
+ "aaSorting": [[ 1, "asc" ]],
+//"sDom": '<"support-table-header">',
+// ^^^ this is wrong ^^^
+"bDestroy" : true,
+"bAutoWidth" : true,
+"sScrollY" : "450",
+"sScrollX" : "100%",
+"bScrollCollapse" : true,
+"bSort" : true,
+"sPaginationType" : "full_numbers",
+"iDisplayLength" : 5,
+"bLengthChange" : true
+    });
+    
+});
+        
+    </script>
     <!-- jquery.counterup.min.js -->
     <script type="text/javascript" src="Accets/js/jquery.waypoints.js"></script>
     <script type="text/javascript" src="Accets/js/jquery.counterup.min.js"></script>
@@ -537,8 +657,6 @@
 
     <!-- custom script -->
     <script type="text/javascript" src="Accets/js/custom.js"></script>
-	 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-	 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script type="text/javascript">
 			$(function(){
 			    $(".showpassword").each(function(index,input) {
@@ -569,8 +687,7 @@
 			    });
 			});
 		</script>
-		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
         
        <script>
            $("#bgw").click(function () {
@@ -649,5 +766,50 @@
        </script>
         <script src="Accets/validator.js"></script>
         <script src="Accets/contact.js"></script>
+        <!--<script src="assets/jquery/jquery-3.1.0.min.js"></script>-->
+		<script src="assets/tether/tether.min.js"></script>
+		<script src="assets/bootstrap/bootstrap4-alpha3.min.js"></script>
+		<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	
+		
+    	<script>
+			$(function () {
+				var totalRevenue = 15341110;
+				
+				
+				var productsRevenuePieChart = new CanvasJS.Chart("products-revenue-pie-chart", {
+					animationEnabled: true,
+					theme: "theme2",
+					legend: {
+						fontSize: 14
+					},
+					toolTip: {
+						borderThickness: 0,
+						content: "<span style='\"'color: {color};'\"'>{name}</span>: ${y} (#percent%)",
+						cornerRadius: 0
+					},
+					data: [
+						{       
+							indexLabelFontColor: "#676464",
+							indexLabelFontSize: 14,
+							legendMarkerType: "square",
+							legendText: "{indexLabel}",
+							showInLegend: true,
+							startAngle:  90,
+							type: "pie",
+							dataPoints: [
+								{  y: 6289855, name:"BGW", indexLabel: "BGW - 41%", legendText: "BGW", exploded: true },
+								{  y: 2761400, name:"IVAPP", indexLabel: "IVAPP - 18%", legendText: "IVAPP" },
+								{  y: 3681866, name:"SNM", indexLabel: "SNM - 24%", legendText: "SNM", color: "#8064a1" },
+								{  y: 2607989, name:"IPSM", indexLabel: "IPSM - 17%", legendText: "IPSM" }
+							]
+						}
+					]
+				});
+				
+				productsRevenuePieChart.render();
+				
+			});
+		</script>
   </body>
 </html>
