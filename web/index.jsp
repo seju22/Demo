@@ -193,7 +193,7 @@
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <div class="subscribe-section section-title title">
-                  <h1 class="text-center">Objective</h1>
+                  <h1 class="text-center">Home</h1>
                   <p class="text-center">To create an application status view for every release from a performance aspect. Performance Dahsboard Page should generate charts for different transaction for the same application based on date-range or release month selection. Along with this, it should also give historical data based on user need for any given application. On the right side of page a view on upcoming activities(this will be kind of moving them).</p>
 				  <p class="text-center">Currently, we are expecting a very simple HTML page to feed data manually on the page and that will insert record in DB. Please help to complete this activity by EOD of Tuesday(11/15). Please see attached deck for HTML Page design.</p>
 				  <p class="text-center">Will share template for main dashboard page soon.</p>
