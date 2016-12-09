@@ -7,6 +7,7 @@ package com.test.controller;
  */
 
 import com.test.bean.Demo;
+
 import com.test.dao.Dao;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -74,6 +75,7 @@ public class Controller extends HttpServlet {
                 try {
                   Demo d=  demo.getById(id);
                    request.setAttribute("edit", d);
+                   System.out.print("Edit Error :"+d.getAisle());;
                    RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
                     rd.forward(request, response);
                 } catch (ClassNotFoundException | SQLException ex) {
@@ -106,34 +108,47 @@ public class Controller extends HttpServlet {
             throws ServletException, IOException {
       //  processRequest(request, response);
      Demo d=new Demo();
-      
+
       d.setDate(request.getParameter("date"));
+         System.out.println("date :"+request.getParameter("date"));
       d.setMonth(request.getParameter("month"));
-      d.setName(request.getParameter("name"));
-      d.setEquipment(request.getParameter("equipment"));
-      d.setAisle(request.getParameter("aisle"));
-      d.setDetails(request.getParameter("details"));
-      d.setDatapath(request.getParameter("datapath"));
        
-          
-        int id=Integer.parseInt(request.getParameter("id"));
-        Dao dao=new Dao();
-        try {
-            if(id==0){
-         int result= dao.insert(d);
-         RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
-                rd.forward(request, response);
-                  }
-        else{
-              d.setId(id);
-          dao.update(d);
-               RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
-                rd.forward(request, response);
-        }
+      d.setName(request.getParameter("name"));
          
-        } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
-        }
+      d.setEquipment(request.getParameter("equipment"));
+       
+      d.setAisle(request.getParameter("aisle"));
+        
+      d.setDetails(request.getParameter("details"));
+        
+      d.setDatapath(request.getParameter("datapath"));
+      
+    
+          Dao dao=new Dao();
+          if(request.getParameter("id")==null){
+         try {
+             int result= dao.insert(d);
+         } catch (ClassNotFoundException | SQLException ex) {
+             Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+         }
+         response.sendRedirect("index.jsp#4thPage");
+//         RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
+//                rd.forward(request, response);
+          }else{
+                int id=Integer.parseInt(request.getParameter("id"));
+              d.setId(id);
+         try {
+             dao.update(d);
+         } catch (ClassNotFoundException | SQLException ex) {
+             Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+         }
+         response.sendRedirect("index.jsp#4thPage");
+//               RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
+//                rd.forward(request, response);
+          }
+      
+        
+        
       
     }
 

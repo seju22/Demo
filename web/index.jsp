@@ -35,8 +35,11 @@
  <script type="text/javascript" src="Accets/js/jquery-datatable.js"></script>
  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
  
- 
- 
+<!-- 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
  
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Josefin+Sans:400,600,700" rel="stylesheet">
@@ -62,6 +65,10 @@
        <link rel="stylesheet" type="text/css" href="Accets/css/style.css" />
        <!--<script src="Accets/js/modernizr.custom.63321.js"></script>--> 
   
+      <!--       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+<!--      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
     
        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />-->
    
@@ -79,8 +86,51 @@
     <script>
         $(document).ready(function() {
         $('#example').DataTable();
-        } );
+        });
     </script>
+    <script>
+$(document).ready(function () {
+
+
+    $(".sh").change(function () {
+         
+      if ($(this).val() == "BGW") {
+          $('#appId').val($(this).val());
+        $('#changed1').text($(this).val());
+        $('#changed2').text($(this).val());
+        $('#changed3').text($(this).val());
+        $('#changed4').text($(this).val());
+        $('#myModal').modal('show');
+      }
+      if ($(this).val() == "IVAPP") {
+          $('#appId').val($(this).val());
+          $('#changed1').text($(this).val());
+        $('#changed2').text($(this).val());
+        $('#changed3').text($(this).val());
+        $('#changed4').text($(this).val());
+        $('#myModal').modal('show');
+      }
+      if ($(this).val() == "SNM") {
+          $('#appId').val($(this).val());
+          $('#changed1').text($(this).val());
+        $('#changed2').text($(this).val());
+        $('#changed3').text($(this).val());
+        $('#changed4').text($(this).val());
+        $('#myModal').modal('show');
+      }
+      if ($(this).val() == "IPSM") {
+          $('#appId').val($(this).val());
+          $('#changed1').text($(this).val());
+        $('#changed2').text($(this).val());
+        $('#changed3').text($(this).val());
+        $('#changed4').text($(this).val());
+        $('#myModal').modal('show');
+      }
+   
+ });
+
+});
+</script>
     
     <!--            graph      -->
     	<!--<link rel="stylesheet" href="assets/bootstrap/bootstrap4-alpha3.min.css">-->
@@ -142,7 +192,77 @@
   </head>
 
     <body class="image-background" bg-image="images/bg6.jpg">
+    <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                     <form class="form-horizontal" action="Controller" method="post" >
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Transaction Form</h4>
+                    </div>
+                    <div class="modal-body col-md-12">
+                        
+                       
+                            <!--<input id="dbId2" type="hidden" name="id" />-->
+                            <input type="hidden" name="name" id="appId" value="" placeholder="application name" />
+                            <div class="row col-xs-12"> 
+                                
+                                          <div class="form-group has-warning">
+                                        <label class="col-xs-6 control-label" for="inputSuccess">Rel.Month</label>
+                                        <div class="col-xs-6" style="padding-top: 24px;">
+                                            <input type="text" name="month"/>
+                                        </div>
+                                    </div>
+                                         <div class="form-group has-warning">
+                                        <label class="col-xs-6 control-label" for="inputSuccess">Date</label>
+                                        <div class="col-xs-6" style="padding-top: 24px;">
+                                            <input type="text" name="date"/>
+                                        </div>
+                                    </div>
+                                    
+                                                    <div class="form-group has-error" style="margin-bottom: -20px;">
+                                <label class="col-xs-6 control-label" for="inputError">Transaction Name</label>
+                                <div class="col-xs-6">       
+                                    <label class="control-label" for="inputError">Average Response Time</label>
+                                </div>
+                            </div>
 
+                                     <br>
+                                     <div class="form-group has-success">
+                                         <label class="col-xs-6 control-label" for="inputSuccess"><span id="changed1">BGW</span>_Open equipment page</label>
+                                        <div class="col-xs-6" style="padding-top: 24px;">
+                                            <input type="text"  name="equipment" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group has-success">
+                                        <label class="col-xs-6 control-label" for="inputSuccess"><span id="changed2">BGW</span>_Open_Add Aisle Page</label>
+                                        <div class="col-xs-6" style="padding-top: 24px;">
+                                            <input type="text"  name="aisle" />
+                                        </div>
+                                    </div>
+                                      <div class="form-group has-success">
+                                          <label class="col-xs-6 control-label" for="inputSuccess"><span id="changed3">BGW</span>_Load Rack Details</label>
+                                        <div class="col-xs-6" style="padding-top: 24px;">
+                                            <input type="text" name="details" />
+                                        </div>
+                                    </div>
+                                     <div class="form-group has-success">
+                                         <label class="col-xs-6 control-label" for="inputSuccess"><span id="changed4">BGW</span>_Select Path</label>
+                                        <div class="col-xs-6" style="padding-top: 24px;">
+                                            <input type="text" name="datapath" />
+                                        </div>
+                                    </div>
+                                    </div>
+                      
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
     <!-- Preloader -->
      <!--  <div id="preloader">
         <div id="status">
@@ -192,7 +312,7 @@
           <div class="common-container">
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
-                <div class="subscribe-section section-title title">
+                <div class="Home-section section-title title">
                   <h1 class="text-center">Home</h1>
                   <p class="text-center">To create an application status view for every release from a performance aspect. Performance Dahsboard Page should generate charts for different transaction for the same application based on date-range or release month selection. Along with this, it should also give historical data based on user need for any given application. On the right side of page a view on upcoming activities(this will be kind of moving them).</p>
 				  <p class="text-center">Currently, we are expecting a very simple HTML page to feed data manually on the page and that will insert record in DB. Please help to complete this activity by EOD of Tuesday(11/15). Please see attached deck for HTML Page design.</p>
@@ -303,7 +423,7 @@
       
 </div>
 	  
-	  <!---- Form ------------------------------------------------------------>
+	  <!---- Form ------------------------------------------->
 	      <div class="section about dark-image" id="section3">
         <div class="container">
           <div class="common-container">
@@ -332,6 +452,7 @@
                 Demo d1=(Demo)request.getAttribute("edit");
                 
                 ID=d1.getId();
+                System.out.print("ID is :"+ID);
                 name1=d1.getName();
                 date1=d1.getDate();
                 month1=d1.getMonth();
@@ -342,26 +463,48 @@
                 }
             %>
             
-                <div id="main1">
-		<nav class="codrops-demos" style="margin-top: 20px;">
+              <div class="form-group col-md-3" id="hideMenu">
+      <label for="sel1">Application :</label>
+      <select class="form-control sh" id="showModal">
+        <option value="" disabled selected>Choose</option>
+        <option value="BGW">BGW</option>
+        <option value="IVAPP">IVAPP</option>
+        <option value="SNM">SNM</option>
+        <option value="IPSM">IPSM</option>
+      </select>
+              </div>
+            <% if(ID != 0) { System.out.print("ID is :"+ID);%>
+                <div id="main">
+	<!--	<nav class="codrops-demos" style="margin-top: 20px;">
 				  
 					<input value="BGW" type="button" id="bgw"/>
-                                        <input value="IVAPP" type="button" id="ivapp"/>
-                                        <input value="SNM" type="button" id="snm"/>
-                                        <input value="IPSM" type="button" id="ipsm"/>
+                                       <input value="IVAPP" type="button" id="ivapp"/>
+                                       <input value="SNM" type="button" id="snm"/>
+                                       <input value="IPSM" type="button" id="ipsm"/>
 				</nav>
-                    <div id="main2" style="display:none">
+        -->
+        <div class="form-group col-md-3">
+      <label for="sel1">Application :</label>
+      <select class="form-control" name="name">
+        <option value="" disabled selected>Choose</option>
+        <option value="BGW" <%= (name1.equals("BGW"))?"selected":"BGW" %> >BGW</option>
+        <option value="IVAPP" <%= (name1.equals("IVAPP"))?"selected":"IVAPP" %> >IVAPP</option>
+        <option value="SNM" <%= (name1.equals("SNM"))?"selected":"SNM" %> >SNM</option>
+        <option value="IPSM" <%= (name1.equals("IPSM"))?"selected":"IPSM" %> >IPSM</option>
+      </select>
+              </div>
+                    <div id="main">
                     
                     <div class="col-md-4">
-                        <label>Application :</label> 
-                    <input type="text" name="name" id="appId" value="<%=name1%>" placeholder="application name" />
-                      <input value="Add Result" type="button" id="add"/>
+                        <!--<label>Application :</label>--> 
+<!--                    <input type="text" name="name" id="appId" value="<%=name1%>" placeholder="application name" />-->
+<!--                      <input value="Add Result" type="button" id="add"/>-->
                     </div>
                   
                     </div>
                 </div>
                 
-                <div id="main3" style="display:none">
+              <div id="main" >
                     <input id="dbId" type="hidden" name="id" value="<%=ID%>"/>
 		<p class="text" style="float: right; padding-right: 140px;"><label for="first">Rel.Month</label>
 			<input type="text" name="month" value="<%=month1%>" placeholder="yyyy" size="15" value="" />
@@ -457,7 +600,7 @@
 							<div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="form_name">Select path</label>
+                                  <label for="form_name">Select path</label>
 										
 										
                                              
@@ -479,17 +622,14 @@
                             
                         </div>
 
-                    </form>
+                   
 
-                </div><!-- /.8 -->
+                </div> 
 
-            </div> <!-- /.row-->
-
-         <!-- /.container-->
-
-              <!-- End col -->
-            </div><!-- End row -->
-
+            </div>
+                                        <% } %>
+            </div> 
+ </form>
            
           </div>
         </div>
@@ -607,26 +747,7 @@
 
     <!-- js placed at the end of the document so the pages load faster -->
     
-    <script>
-        $(document).ready(function() {
-    var dataTable = $('#example').dataTable({
- "aaSorting": [[ 1, "asc" ]],
-//"sDom": '<"support-table-header">',
-// ^^^ this is wrong ^^^
-"bDestroy" : true,
-"bAutoWidth" : true,
-"sScrollY" : "450",
-"sScrollX" : "100%",
-"bScrollCollapse" : true,
-"bSort" : true,
-"sPaginationType" : "full_numbers",
-"iDisplayLength" : 5,
-"bLengthChange" : true
-    });
     
-});
-        
-    </script>
     <!-- jquery.counterup.min.js -->
     <script type="text/javascript" src="Accets/js/jquery.waypoints.js"></script>
     <script type="text/javascript" src="Accets/js/jquery.counterup.min.js"></script>
@@ -657,6 +778,71 @@
 
     <!-- custom script -->
     <script type="text/javascript" src="Accets/js/custom.js"></script>
+     <script src="Accets/validator.js"></script>
+        <script src="Accets/contact.js"></script>
+        <!--<script src="assets/jquery/jquery-3.1.0.min.js"></script>-->
+		<script src="assets/tether/tether.min.js"></script>
+		<script src="assets/bootstrap/bootstrap4-alpha3.min.js"></script>
+		<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<script>
+			$(function () {
+				var totalRevenue = 15341110;
+				
+				
+				var productsRevenuePieChart = new CanvasJS.Chart("products-revenue-pie-chart", {
+					animationEnabled: true,
+					theme: "theme2",
+					legend: {
+						fontSize: 14
+					},
+					toolTip: {
+						borderThickness: 0,
+						content: "<span style='\"'color: {color};'\"'>{name}</span>: ${y} (#percent%)",
+						cornerRadius: 0
+					},
+					data: [
+						{       
+							indexLabelFontColor: "#676464",
+							indexLabelFontSize: 14,
+							legendMarkerType: "square",
+							legendText: "{indexLabel}",
+							showInLegend: true,
+							startAngle:  90,
+							type: "pie",
+							dataPoints: [
+								{  y: 6289855, name:"BGW", indexLabel: "BGW - 41%", legendText: "BGW", exploded: true },
+								{  y: 2761400, name:"IVAPP", indexLabel: "IVAPP - 18%", legendText: "IVAPP" },
+								{  y: 3681866, name:"SNM", indexLabel: "SNM - 24%", legendText: "SNM", color: "#8064a1" },
+								{  y: 2607989, name:"IPSM", indexLabel: "IPSM - 17%", legendText: "IPSM" }
+							]
+						}
+					]
+				});
+				
+				productsRevenuePieChart.render();
+				
+			});
+		</script>
+    <script>
+        $(document).ready(function() {
+    var dataTable = $('#example').dataTable({
+ "aaSorting": [[ 1, "asc" ]],
+//"sDom": '<"support-table-header">',
+// ^^^ this is wrong ^^^
+"bDestroy" : true,
+"bAutoWidth" : true,
+"sScrollY" : "450",
+"sScrollX" : "100%",
+"bScrollCollapse" : true,
+"bSort" : true,
+"sPaginationType" : "full_numbers",
+"iDisplayLength" : 5,
+"bLengthChange" : true
+    });
+    
+});
+        
+    </script>
 		<script type="text/javascript">
 			$(function(){
 			    $(".showpassword").each(function(index,input) {
@@ -689,7 +875,7 @@
 		</script>
 	
         
-       <script>
+<!--       <script>
            $("#bgw").click(function () {
                                 $("#main2").show();
                                 $("#main3").hide();
@@ -744,72 +930,29 @@
                 $("#main3").show();
             })
            
-       </script>
+       </script> -->
        <script>
            $(document).ready(function(){
+               
                var path1 = $("#dbId").val().replace(/C:\\fakepath\\/i, '');
            if (path1 == 0) { //undefined will yield false
             //call a method! .val() not .val
 //                alert("ID is not there!!");
-                $("#main1").show();
-                $("#main2").hide();
-                $("#main3").hide();
+                $("#hideMenu").show();
+//                $("#main2").hide();
+//                $("#main3").hide();
             } 
             else if (path1 != 0) { 
 //                alert("ID is there!!");
-                $("#main1").show();
-                $("#main2").show();
-                $("#main3").show();
+                $("#hideMenu").hide();
+//                $("#main2").show();
+//                $("#main3").show();
             }
          });
            
        </script>
-        <script src="Accets/validator.js"></script>
-        <script src="Accets/contact.js"></script>
-        <!--<script src="assets/jquery/jquery-3.1.0.min.js"></script>-->
-		<script src="assets/tether/tether.min.js"></script>
-		<script src="assets/bootstrap/bootstrap4-alpha3.min.js"></script>
-		<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
-	
+       
 		
-    	<script>
-			$(function () {
-				var totalRevenue = 15341110;
-				
-				
-				var productsRevenuePieChart = new CanvasJS.Chart("products-revenue-pie-chart", {
-					animationEnabled: true,
-					theme: "theme2",
-					legend: {
-						fontSize: 14
-					},
-					toolTip: {
-						borderThickness: 0,
-						content: "<span style='\"'color: {color};'\"'>{name}</span>: ${y} (#percent%)",
-						cornerRadius: 0
-					},
-					data: [
-						{       
-							indexLabelFontColor: "#676464",
-							indexLabelFontSize: 14,
-							legendMarkerType: "square",
-							legendText: "{indexLabel}",
-							showInLegend: true,
-							startAngle:  90,
-							type: "pie",
-							dataPoints: [
-								{  y: 6289855, name:"BGW", indexLabel: "BGW - 41%", legendText: "BGW", exploded: true },
-								{  y: 2761400, name:"IVAPP", indexLabel: "IVAPP - 18%", legendText: "IVAPP" },
-								{  y: 3681866, name:"SNM", indexLabel: "SNM - 24%", legendText: "SNM", color: "#8064a1" },
-								{  y: 2607989, name:"IPSM", indexLabel: "IPSM - 17%", legendText: "IPSM" }
-							]
-						}
-					]
-				});
-				
-				productsRevenuePieChart.render();
-				
-			});
-		</script>
+    	
   </body>
 </html>
