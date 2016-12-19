@@ -112,22 +112,28 @@ public class Controller extends HttpServlet {
       d.setDate(request.getParameter("date"));
          System.out.println("date :"+request.getParameter("date"));
       d.setMonth(request.getParameter("month"));
-       
+        System.out.println("date :"+request.getParameter("month"));
       d.setName(request.getParameter("name"));
-         
+          System.out.println("date :"+request.getParameter("name"));
+      d.setSubname(request.getParameter("subname"));
+         System.out.println("date :"+request.getParameter("subname"));
       d.setEquipment(request.getParameter("equipment"));
-       
+        System.out.println("date :"+request.getParameter("equipment"));
       d.setAisle(request.getParameter("aisle"));
-        
+         System.out.println("date :"+request.getParameter("aisle"));
       d.setDetails(request.getParameter("details"));
-        
+         System.out.println("date :"+request.getParameter("details"));
       d.setDatapath(request.getParameter("datapath"));
-      
-    
+       System.out.println("date :"+request.getParameter("datapath"));
+    System.out.println("id is :"+request.getParameter("id"));
+    String id = request.getParameter("id");
           Dao dao=new Dao();
-          if(request.getParameter("id")==null){
+          if(id.length() > 0 || id.isEmpty()){
          try {
-             int result= dao.insert(d);
+             d.setId(Integer.parseInt(id));
+              int result= dao.insert(d);
+             System.out.print("result"+result);
+            
          } catch (ClassNotFoundException | SQLException ex) {
              Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
          }
@@ -135,8 +141,8 @@ public class Controller extends HttpServlet {
 //         RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
 //                rd.forward(request, response);
           }else{
-                int id=Integer.parseInt(request.getParameter("id"));
-              d.setId(id);
+//                int id=Integer.parseInt(request.getParameter("id"));
+              d.setId(Integer.parseInt(id));
          try {
              dao.update(d);
          } catch (ClassNotFoundException | SQLException ex) {

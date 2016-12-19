@@ -40,6 +40,17 @@ public class Demo implements Serializable {
     @Column(name = "name")
     private String name;
     @Size(max = 50)
+    @Column(name = "subname")
+    private String subname;
+
+    public String getSubname() {
+        return subname;
+    }
+
+    public void setSubname(String subname) {
+        this.subname = subname;
+    }
+    @Size(max = 50)
     @Column(name = "aisle")
     private String aisle;
     @Size(max = 50)

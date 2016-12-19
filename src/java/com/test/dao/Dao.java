@@ -22,15 +22,16 @@ public class Dao {
     public int insert(Demo deo) throws ClassNotFoundException, SQLException {
         int i ;
         Connection con=DbConnection.getInstance().getConnection();
-        String sql="insert into demo(date,month,name,equipment,aisle,details,datapath) values (?,?,?,?,?,?,?)";
+        String sql="insert into demo(date,month,name,subname,equipment,aisle,details,datapath) values (?,?,?,?,?,?,?,?)";
         PreparedStatement ps =con.prepareStatement(sql);
         ps.setString(1,deo.getDate());
         ps.setString(2,deo.getMonth());
         ps.setString(3, deo.getName());
-        ps.setString(4,deo.getEquipment());
-        ps.setString(5, deo.getAisle());
-        ps.setString(6,deo.getDetails());
-        ps.setString(7,deo.getDatapath());
+        ps.setString(4, deo.getSubname());
+        ps.setString(5,deo.getEquipment());
+        ps.setString(6, deo.getAisle());
+        ps.setString(7,deo.getDetails());
+        ps.setString(8,deo.getDatapath());
         i= ps.executeUpdate();
         ps.close();
         return i;
@@ -47,6 +48,7 @@ public class Dao {
            d.setDate(rs.getString("date"));
            d.setMonth(rs.getString("month"));
            d.setName(rs.getString("name"));
+            d.setSubname(rs.getString("subname"));
            d.setEquipment(rs.getString("equipment"));
            d.setAisle(rs.getString("aisle"));
            d.setDetails(rs.getString("details"));
@@ -66,7 +68,8 @@ public class Dao {
             d.setId(rs.getInt("id"));
             d.setDate(rs.getString("date"));
             d.setMonth(rs.getString("month"));
-            d.setName(rs.getString("name"));            
+            d.setName(rs.getString("name")); 
+             d.setSubname(rs.getString("subname"));
             d.setEquipment(rs.getString("equipment"));
             d.setAisle(rs.getString("aisle"));
             d.setDetails(rs.getString("details"));
@@ -77,7 +80,7 @@ public class Dao {
     
     public void update(Demo d) throws ClassNotFoundException, SQLException{
          Connection con=DbConnection.getInstance().getConnection();
-         PreparedStatement st=con.prepareStatement("update demo set date='"+d.getDate()+"',month='"+d.getMonth()+"',name='"+d.getName()+"',equipment='"+d.getEquipment()+"',aisle='"+d.getAisle()+"',details='"+d.getDetails()+"',datapath='"+d.getDatapath()+"' where id='"+d.getId()+"'");
+         PreparedStatement st=con.prepareStatement("update demo set date='"+d.getDate()+"',month='"+d.getMonth()+"',name='"+d.getName()+"',subname='"+d.getSubname()+"',equipment='"+d.getEquipment()+"',aisle='"+d.getAisle()+"',details='"+d.getDetails()+"',datapath='"+d.getDatapath()+"' where id='"+d.getId()+"'");
          st.executeUpdate();
     }
     

@@ -25,27 +25,24 @@
     <title>Title</title>
     
     
-    <!--<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css">-->
-    <link rel="stylesheet" type="text/css" href="Accets1/css/jquery.dataTables.css">
-    <!--<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css">
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css">
+<!--<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css">
 <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>-->
 <script type="text/javascript" src="Accets/js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="Accets/js/bootstrap.min.js"></script>
 <!--<script type="text" src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>-->
  <script type="text/javascript" src="Accets/js/jquery-datatable.js"></script>
- <!--<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />-->
-    <link rel="stylesheet" type="text/css" href="Accets1/css/jquery.dataTables.min.css">
+ <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
  
- <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
-  <link rel="stylesheet" type="text/css" href="Accets1/css/bootstrap.min.css">
- <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+<!-- 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
 <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
  
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Josefin+Sans:400,600,700" rel="stylesheet">
-        <!--<link rel="stylesheet" type="text/css" href="Accets1/css/familyArimo.css">-->
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" type="text/css" href="Accets/css/bootstrap.min.css">
@@ -104,9 +101,6 @@ $(document).ready(function () {
         $('#changed3').text($(this).val());
         $('#changed4').text($(this).val());
         $('#myModal').modal('show');
-//        $('.modal-backdrop').appendTo('#fullpage');
-//        $('body').removeClass();
-        
       }
       if ($(this).val() == "IVAPP") {
           $('#appId').val($(this).val());
@@ -191,19 +185,14 @@ $(document).ready(function () {
 			#revenue-column-chart, #products-revenue-pie-chart, #orders-spline-chart {
 				height: 300px;
 				width: 100%;
-			}	
-                        
-                        
-                        .modal, .modal-backdrop{
-                            position: inherit !important;
-                        }
+			}			
 		</style>
                 		<!-- Scripts -->
 		
   </head>
 
     <body class="image-background" bg-image="images/bg6.jpg">
-<!--    <div id="myModal3" class="modal fade">
+    <div id="myModal" class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
                      <form class="form-horizontal" action="Controller" method="post" >
@@ -214,20 +203,20 @@ $(document).ready(function () {
                     <div class="modal-body col-md-12">
                         
                        
-                            <input id="dbId2" type="hidden" name="id" />
+                            <!--<input id="dbId2" type="hidden" name="id" />-->
                             <input type="hidden" name="name" id="appId" value="" placeholder="application name" />
                             <div class="row col-xs-12"> 
                                 
                                           <div class="form-group has-warning">
                                         <label class="col-xs-6 control-label" for="inputSuccess">Rel.Month</label>
                                         <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="text" name="month" required/>
+                                            <input type="text" name="month"/>
                                         </div>
                                     </div>
                                          <div class="form-group has-warning">
                                         <label class="col-xs-6 control-label" for="inputSuccess">Date</label>
                                         <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="text" name="date" required/>
+                                            <input type="text" name="date"/>
                                         </div>
                                     </div>
                                     
@@ -242,25 +231,25 @@ $(document).ready(function () {
                                      <div class="form-group has-success">
                                          <label class="col-xs-6 control-label" for="inputSuccess"><span id="changed1">BGW</span>_Open equipment page</label>
                                         <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="text"  name="equipment" required  />
+                                            <input type="text"  name="equipment" />
                                         </div>
                                     </div>
                                     <div class="form-group has-success">
                                         <label class="col-xs-6 control-label" for="inputSuccess"><span id="changed2">BGW</span>_Open_Add Aisle Page</label>
                                         <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="text"  name="aisle" required />
+                                            <input type="text"  name="aisle" />
                                         </div>
                                     </div>
                                       <div class="form-group has-success">
                                           <label class="col-xs-6 control-label" for="inputSuccess"><span id="changed3">BGW</span>_Load Rack Details</label>
                                         <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="text" name="details" required/>
+                                            <input type="text" name="details" />
                                         </div>
                                     </div>
                                      <div class="form-group has-success">
                                          <label class="col-xs-6 control-label" for="inputSuccess"><span id="changed4">BGW</span>_Select Path</label>
                                         <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="text" name="datapath" required/>
+                                            <input type="text" name="datapath" />
                                         </div>
                                     </div>
                                     </div>
@@ -273,7 +262,7 @@ $(document).ready(function () {
                 </form>
                 </div>
             </div>
-        </div>-->
+        </div>
     <!-- Preloader -->
      <!--  <div id="preloader">
         <div id="status">
@@ -447,11 +436,10 @@ $(document).ready(function () {
                 </div>
 				
 				
-		
+		<form action="Controller" method="post" />
 		     <%
                 int ID=0;
                 String name1="";
-                 String subname1="";
                 String date1="";
                 String month1="";
                 String datapath1="";
@@ -466,7 +454,6 @@ $(document).ready(function () {
                 ID=d1.getId();
                 System.out.print("ID is :"+ID);
                 name1=d1.getName();
-                subname1=d1.getSubname();
                 date1=d1.getDate();
                 month1=d1.getMonth();
                 details1=d1.getDetails();
@@ -478,152 +465,14 @@ $(document).ready(function () {
             
               <div class="form-group col-md-3" id="hideMenu">
       <label for="sel1">Application :</label>
-    
-      <select class="form-control" size="1" id="Rank" title="" name="Rank">
+      <select class="form-control sh" id="showModal">
         <option value="" disabled selected>Choose</option>
-        <option value="BGW" <%= (name1.equals("BGW"))?"selected":"BGW" %> >BGW</option>
-        <option value="IVAPP" <%= (name1.equals("IVAPP"))?"selected":"IVAPP" %> >IVAPP</option>
-        <option value="SNM" <%= (name1.equals("SNM"))?"selected":"SNM" %> >SNM</option>
-        <option value="IPSM" <%= (name1.equals("IPSM"))?"selected":"IPSM" %> >IPSM</option>
-    </select>
-      <div class="container2">
-    <div class="BGW">
-        <select class="form-control second-level-select" id="app1">
-            <option value="">-Choose-</option>
-            <option value="Open Equipment Page">Open Equipment Page</option>
-            <option value="Open Add Aisle Page">Open Add Aisle Page</option>
-            <option value="Load Rack Details">Load Rack Details</option>
-            <option value="Path Select Path">Path Select Path</option>
-            <option value="Path Open CircuitId Details">Path Open Circuit Id Details</option>
-            <option value="Path Open Circuit View Page">Path Open Circuit View Page</option>
-            <option value="Path Open Print View Page">Path Open Print View Page</option>
-            <option value="Path Open Circuit Premises Page">Path Open Circuit Premises Page</option>
-            <option value="Path Open Circuit View Page">Path Open Circuit View Page</option>
-            <option value="Path Click Modify">Path Click Modify</option>
-            <option value="Site Open Add New Site Page">Site Open Add New Site Page</option>
-            <option value="View Order OpenView Order Page">View Order Open View Order Page</option>
-            <option value="View Order Open Audits Tab">View Order Open Audits Tab</option>
-            <option value="View Order Open Interface Activity Tab">View Order Open Interface Activity Tab</option>
-            <option value="Search Task Record">Search Task Record</option>
-            <option value="Search Task Open Task Detail Page">Search Task Open Task Detail Page</option>
-        </select>
-    </div>
-    <div class="IVAPP">
-        <select class="form-control sh second-level-select">
-            <option value="">-Choose-</option>
-            <option value="Circuit-Search Circuit">Circuit-Search Circuit</option>
-            <option value="Work Order-Search Work Order">Work Order-Search Work Order</option>
-            <option value="WS Get PVC Changeinfo">WS Get PVC Changeinfo</option>
-            <option value="Ws Get Circuit & Pvcs IPSM">WS Get Circuit & Pvcs IPSM</option>
-            <option value="TDM Order Approve">TDM Order Approve</option>
-            <option value="TDM Order Provisioning-Search WorkOrder">TDM Order Provisioning-Search WorkOrder</option>
-            <option value="TDM Order Provisioning-Click Submit Provision Button">TDM Order Provisioning-Click Submit Provision Button</option>
-            
-        </select>
-    </div>
-           <div class="SNM">
-        <select class="form-control sh second-level-select">
-            <option value="">-Choose-</option>
-            <option value="Advanced Trunk Search-Search Trunks">Advanced Trunk Search-Search Trunks</option>
-            <option value="Circuit Assign/Search Site Partname">Circuit Assign/Search Site Partname</option>
-            <option value="Circuit Assign/Provisio-Find Ports Field">Circuit Assign/Provisio-Find Ports Field</option>
-            <option value="Circuit View Modify-Query">Circuit View Modify-Query</option>
-            <option value="NNIConnection New-SEarch NNI">NNIConnection New-SEarch NNI</option>
-            <option value="WS find Access Cicuit Capacity At Multiple Sites">WS find Access Cicuit Capacity At Multiple Sites</option>
-            <option value="WS find Path Capacity">WS find Path Capacity</option>
-            <option value="WS get NNICapacity From SNM">WS get NNICapacity From SNM</option>
-
-        </select>
-    </div>
-           <div class="IPSM">
-        <select class="form-control sh second-level-select">
-            <option value="">-Choose-</option>
-            <option value="SITE Level Search-Select Cloudservices Click Search">Select Cloudservices Click Search</option>
-            <option value="SITE Level Search-Search Site Partname">Search Site Partname</option>
-            <option value="SITE Level Search-Search Circuit Id">Search Circuit Id</option>
-            <option value="VPN Level Search-Select Cloudservices Click Search">Select Cloudservices Click Search</option>
-            <option value="WS UpdateSiteinfo Invoke">WS UpdateSiteinfo Invoke</option>                       
-        </select>
-    </div>
-</div>
+        <option value="BGW">BGW</option>
+        <option value="IVAPP">IVAPP</option>
+        <option value="SNM">SNM</option>
+        <option value="IPSM">IPSM</option>
+      </select>
               </div>
-      
-
-
-      <div id="myModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Transaction Form</h4>
-                    </div>
-                    <form class="form-horizontal" action="Controller" method="post" >
-                    <div class="modal-body col-md-12">
-                        
-                       
-                            <!--<input id="dbId2" type="hidden" name="id" />-->
-                             <input id="dbId" type="hidden" name="id" value="<%=ID%>"/>
-                            <input type="text" name="name" id="appId" value="" placeholder="application name" />
-                            <input type="text" name="subname" id="appId2" value="<%=subname1%>" placeholder="application sub name" />
-                            <div class="row col-xs-12"> 
-                                
-                                          <div class="form-group has-warning">
-                                        <label class="col-xs-6 control-label" for="inputSuccess">Rel.Month</label>
-                                        <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="text" name="month" value="<%=month1%>" required/>
-                                        </div>
-                                    </div>
-                                         <div class="form-group has-warning">
-                                        <label class="col-xs-6 control-label" for="inputSuccess">Date</label>
-                                        <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="text" name="date" value="<%=date1%>" required/>
-                                        </div>
-                                    </div>
-                                    
-                                                    <div class="form-group has-error" style="margin-bottom: -20px;">
-                                <label class="col-xs-6 control-label" for="inputError">Transaction Name</label>
-                                <div class="col-xs-6">       
-                                    <label class="control-label" for="inputError">Average Response Time</label>
-                                </div>
-                            </div>
-
-                                     <br>
-                                     <div class="form-group has-success">
-                                         <label class="col-xs-6 control-label" for="inputSuccess">Open equipment page</label>
-                                        <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="text"  name="equipment" value="<%=equipment1%>" required  />
-                                        </div>
-                                    </div>
-                                    <div class="form-group has-success">
-                                        <label class="col-xs-6 control-label" for="inputSuccess">Open_Add Aisle Page</label>
-                                        <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="text"  name="aisle" value="<%=aisle1%>" required />
-                                        </div>
-                                    </div>
-                                      <div class="form-group has-success">
-                                          <label class="col-xs-6 control-label" for="inputSuccess">Load Rack Details</label>
-                                        <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="text" name="details" value="<%=details1%>" required/>
-                                        </div>
-                                    </div>
-                                     <div class="form-group has-success">
-                                         <label class="col-xs-6 control-label" for="inputSuccess">Select Path</label>
-                                        <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="text" name="datapath" value="<%=datapath1%>" required/>
-                                        </div>
-                                    </div>
-                                    </div>
-                      
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                </form>
-                </div>
-            </div>
-        </div>
             <% if(ID != 0) { System.out.print("ID is :"+ID);%>
                 <div id="main">
 	<!--	<nav class="codrops-demos" style="margin-top: 20px;">
@@ -634,7 +483,16 @@ $(document).ready(function () {
                                        <input value="IPSM" type="button" id="ipsm"/>
 				</nav>
         -->
-       
+        <div class="form-group col-md-3">
+      <label for="sel1">Application :</label>
+      <select class="form-control" name="name">
+        <option value="" disabled selected>Choose</option>
+        <option value="BGW" <%= (name1.equals("BGW"))?"selected":"BGW" %> >BGW</option>
+        <option value="IVAPP" <%= (name1.equals("IVAPP"))?"selected":"IVAPP" %> >IVAPP</option>
+        <option value="SNM" <%= (name1.equals("SNM"))?"selected":"SNM" %> >SNM</option>
+        <option value="IPSM" <%= (name1.equals("IPSM"))?"selected":"IPSM" %> >IPSM</option>
+      </select>
+              </div>
                     <div id="main">
                     
                     <div class="col-md-4">
@@ -648,10 +506,130 @@ $(document).ready(function () {
                 
               <div id="main" >
                     <input id="dbId" type="hidden" name="id" value="<%=ID%>"/>
+		<p class="text" style="float: right; padding-right: 140px;"><label for="first">Rel.Month</label>
+			<input type="text" name="month" value="<%=month1%>" placeholder="yyyy" size="15" value="" />
+		</p>
+		<p class="text" style="float: right; padding-right: 40px;" ><label for="last">Date</label>
+			<input type="text" name="date" value="<%=date1%>" placeholder="mm-dd-yyyy" size="15" value=""/>
+		</p>
+
+                <div class="col-lg-8 col-lg-offset-2">
+
+                    
+
+
+                    
+
+                        <div class="messages"></div>
+
+                        <div class="controls">
+                             
+							 
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                    <label for="form_name">Transaction Name</label> 
+										
+                                             
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                    <label for="form_name">Average Response Time</label> 
+										
+                                             
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                    <label for="form_name">Open equipment page</label> 
+										
+                                             
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form ">
+                                    <div class="form-group">
+                                        
+                                       <input type="text" name="equipment" value="<%=equipment1%>" class="form-control" size="20" value="" />
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_name">Open Add Aisle page</label> 
+										
+                                             
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form">
+                                    <div class="form-group">
+                                        
+                                        <input id="form_phone" type="text" name="aisle" value="<%=aisle1%>" class="form-control" placeholder="">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+							
+							<div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_name">Load Rack Details</label> 
+										
+                                             
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form">
+                                    <div class="form-group">
+                                        
+                                        <input id="form_phone" type="text" name="details" value="<%=details1%>" class="form-control" placeholder="">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+							
+							<div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                  <label for="form_name">Select path</label>
+										
+										
+                                             
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+									
+                                </div>
+                                <div class="col-md-6 form">
+                                    <div class="form-group">
+                                        
+                                        <input id="form_phone" type="text" name="datapath" value="<%=datapath1%>" class="form-control" placeholder="">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+							
+							<input type="submit" value="Submit" style="float: right;">
+							
+                            
+                        </div>
+
+                   
+
+                </div> 
+
             </div>
                                         <% } %>
             </div> 
- 
+ </form>
            
           </div>
         </div>
@@ -684,7 +662,6 @@ $(document).ready(function () {
                                         <th style="width:7%">Rel.Month</th>
                                         <th style="width:12%">Test Date</th>
 					<th style="width:14%">Transaction Name</th>
-                                        <th style="width:14%">GUI Transaction Name</th>
                                         <th style="width:20%">Open_Equipment Page</th>
                                         <th style="width:19%">Open_Add Aisle Page</th>
                                         <th style="width:17%">Load Rack Details</th>
@@ -699,7 +676,6 @@ $(document).ready(function () {
                 String date;
                 String month;
                 String name;
-                String subname;
                 String datapath;
                 String details;
                 String equipment;
@@ -715,7 +691,6 @@ $(document).ready(function () {
                         date=d.getDate();
                         month=d.getMonth();
                         name=d.getName();
-                        subname=d.getSubname();
                         datapath=d.getDatapath();
                         equipment=d.getEquipment();
                         aisle=d.getAisle();
@@ -725,8 +700,7 @@ $(document).ready(function () {
 <!--            <td><%=id%></td>-->
                 <td><%=month%></td>  
                 <td><%=date%></td>                  
-                <td><%=name%></td>  
-                <td><%=subname%></td>  
+                <td><%=name%></td>   
                 <td><%=equipment%></td>
                 <td><%=aisle%></td>
                 <td><%=details%></td>
@@ -767,7 +741,7 @@ $(document).ready(function () {
         </ul>
       </nav> -->
 
-      <!--<p class="copyright">© 2016 Copyright</p>-->
+      <!--<p class="copyright">Â© 2016 Copyright</p>-->
 
     </footer>
 
@@ -809,8 +783,7 @@ $(document).ready(function () {
         <!--<script src="assets/jquery/jquery-3.1.0.min.js"></script>-->
 		<script src="assets/tether/tether.min.js"></script>
 		<script src="assets/bootstrap/bootstrap4-alpha3.min.js"></script>
-		<!--<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>-->
-                <script src="Accets1/js/canvasjs.min.js"></script>
+		<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	<script>
 			$(function () {
 				var totalRevenue = 15341110;
@@ -970,400 +943,15 @@ $(document).ready(function () {
 //                $("#main3").hide();
             } 
             else if (path1 != 0) { 
-                $('#myModal').modal('show');
 //                alert("ID is there!!");
-//                $("#hideMenu").hide();
+                $("#hideMenu").hide();
 //                $("#main2").show();
 //                $("#main3").show();
             }
          });
            
        </script>
-       <script>
-         $(document).ready(function() {
-    $('#Rank').bind('change', function() {
-        var elements = $('div.container2').children().hide(); // hide all the elements
-        var value = $(this).val();
-        $('#appId').val($(this).val());
-//        alert(value);
-
-      
-            elements.filter('.' + value).show(); // show the ones we want
-        
-    }).trigger('change');
-    
-    $('.second-level-select').bind('change', function() {
-        
-//        var elements = $('div.second-level-container').children().hide(); // hide all the elements
-        var value = $(this).val();
-
-
-        if (value.length) { // if somethings' selected  
-            if ($(this).val() == "Open Equipment Page") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "Open Add Aisle Page") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "Load Rack Details") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "Path Select Path") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "Path Open CircuitId Details") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "Path Open Circuit View Page") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            } if ($(this).val() == "Path Open Print View Page") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "Path Open Circuit Premises Page") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "Path Open Circuit View Page") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "Path Click Modify") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "Site Open Add New Site Page") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "View Order OpenView Order Page") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            } if ($(this).val() == "View Order Open Audits Tab") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "View Order Open Interface Activity Tab") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "Search Task Record") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "Search Task Open Task Detail Page") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "Circuit-Search Circuit") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            } if ($(this).val() == "Work Order-Search Work Order") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "WS Get PVC Changeinfo") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "WS Get Circuit & Pvcs IPSM") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            } if ($(this).val() == "TDM Order Approve") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            } if ($(this).val() == "TDM Order Provisioning-Search WorkOrder") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "TDM Order Provisioning-Click Submit Provision Button") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "Advanced Trunk Search-Search Trunks") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "Circuit Assign/Search Site Partname") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "Circuit Assign/Provisio-Find Ports Field") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "Circuit View Modify-Query") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "NNIConnection New-SEarch NNI") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "WS find Access Cicuit Capacity At Multiple Sites") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "WS find Path Capacity") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "WS get NNICapacity From SNM") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-             if ($(this).val() == "SITE Level Search-Select Cloudservices Click Search") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-            
-             if ($(this).val() == "SITE Level Search-Search Site Partname") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-            
-             if ($(this).val() == "SITE Level Search-Search Circuit Id") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-            
-             if ($(this).val() == "VPN Level Search-Select Cloudservices Click Search") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-            
-             if ($(this).val() == "WS UpdateSiteinfo Invoke") {
-                 var path1 = $("#appId").val().replace(/C:\\fakepath\\/i, '');
-//                 alert("asdasd");
-                $('#appId2').val($(this).val());
-                $('#changed1').text(path1);
-                $('#changed2').text(path1);
-                $('#changed3').text(path1);
-                $('#changed4').text(path1);
-                $('#myModal').modal('show');
-            }
-            
-           
-        }
-    }).trigger('change');
-});
-           </script>
+       
 		
     	
   </body>
