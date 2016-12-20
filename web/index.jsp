@@ -564,8 +564,8 @@ $(document).ready(function () {
                        
                             <!--<input id="dbId2" type="hidden" name="id" />-->
                              <input id="dbId" type="hidden" name="id" value="<%=ID%>"/>
-                            <input type="text" name="name" id="appId" value="" placeholder="application name" style="height:30px;width:100px;"/>
-                            <input type="text" name="subname" id="appId2" value="<%=subname1%>" placeholder="application sub name" style="height:30px;width:240px;"/>
+                            <input type="hidden" name="name" id="appId" value="" placeholder="application name" style="height:30px;width:100px;"/>
+                            <input type="hidden" name="subname" id="appId2" value="<%=subname1%>" placeholder="application sub name" style="height:30px;width:240px;"/>
                             <div class="row col-xs-12"> 
                                 
                                           <div class="form-group has-warning">
@@ -618,7 +618,7 @@ $(document).ready(function () {
                       
                     </div>
                     <div class="modal-footer">
-                        <button type="reset" class="btn btn-default"   data-dismiss="modal">Clear</button>
+                        <button type="reset" class="btn btn-default"   data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
