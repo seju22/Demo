@@ -388,9 +388,9 @@ $(document).ready(function () {
 								<div class="panel panel-default work-progress-table" >
 									   Default panel contents 
 									<div class="panel-heading">DB Table
+									   Table 
 										
 									</div>
-									   Table 
 									<table id="mytable" class="table" >
 										<thead>
 										  <tr>
@@ -514,7 +514,7 @@ $(document).ready(function () {
             <option value="Circuit-Search Circuit">Circuit-Search Circuit</option>
             <option value="Work Order-Search Work Order">Work Order-Search Work Order</option>
             <option value="WS Get PVC Changeinfo">WS Get PVC Changeinfo</option>
-            <option value="Ws Get Circuit & Pvcs IPSM">WS Get Circuit & Pvcs IPSM</option>
+            <option value="WS Get Circuit & Pvcs IPSM">WS Get Circuit & Pvcs IPSM</option>
             <option value="TDM Order Approve">TDM Order Approve</option>
             <option value="TDM Order Provisioning-Search WorkOrder">TDM Order Provisioning-Search WorkOrder</option>
             <option value="TDM Order Provisioning-Click Submit Provision Button">TDM Order Provisioning-Click Submit Provision Button</option>
@@ -564,8 +564,8 @@ $(document).ready(function () {
                        
                             <!--<input id="dbId2" type="hidden" name="id" />-->
                              <input id="dbId" type="hidden" name="id" value="<%=ID%>"/>
-                            <input type="text" name="name" id="appId" value="" placeholder="application name" />
-                            <input type="text" name="subname" id="appId2" value="<%=subname1%>" placeholder="application sub name" />
+                            <input type="hidden" name="name" id="appId" value="" placeholder="application name" />
+                            <input type="hidden" name="subname" id="appId2" value="<%=subname1%>" placeholder="application sub name" />
                             <div class="row col-xs-12"> 
                                 
                                           <div class="form-group has-warning">
@@ -576,8 +576,9 @@ $(document).ready(function () {
                                     </div>
                                          <div class="form-group has-warning">
                                         <label class="col-xs-6 control-label" for="inputSuccess">Date</label>
-                                        <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="text" name="date" value="<%=date1%>" required/>
+                                        <div class="col-xs-6" style="padding-top: 34px;">
+                                            <input type="date" name="date" value="<%=date1%>" required/>
+                                             
                                         </div>
                                     </div>
                                     
@@ -592,25 +593,25 @@ $(document).ready(function () {
                                      <div class="form-group has-success">
                                          <label class="col-xs-6 control-label" for="inputSuccess">Open equipment page</label>
                                         <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="text"  name="equipment" value="<%=equipment1%>" required  />
+                                            <input type="number"  name="equipment"  min="0" max="100" step="0.1"  value="<%=equipment1%>" required style="    padding-right: 68px;" />
                                         </div>
                                     </div>
                                     <div class="form-group has-success">
                                         <label class="col-xs-6 control-label" for="inputSuccess">Open_Add Aisle Page</label>
                                         <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="text"  name="aisle" value="<%=aisle1%>" required />
+                                            <input type="number"  name="aisle"  min="0" max="100" step="0.1" value="<%=aisle1%>" required style="    padding-right: 68px;"/>
                                         </div>
                                     </div>
                                       <div class="form-group has-success">
                                           <label class="col-xs-6 control-label" for="inputSuccess">Load Rack Details</label>
                                         <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="text" name="details" value="<%=details1%>" required/>
+                                            <input type="number" name="details"  min="0" max="100" step="0.1" value="<%=details1%>" required style="    padding-right: 68px;"/>
                                         </div>
                                     </div>
                                      <div class="form-group has-success">
                                          <label class="col-xs-6 control-label" for="inputSuccess">Select Path</label>
                                         <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="text" name="datapath" value="<%=datapath1%>" required/>
+                                            <input type="number" name="datapath"  min="0" max="100" step="0.1"  value="<%=datapath1%>" required style="    padding-right: 68px;"/>
                                         </div>
                                     </div>
                                     </div>

@@ -128,7 +128,7 @@ public class Controller extends HttpServlet {
     System.out.println("id is :"+request.getParameter("id"));
     String id = request.getParameter("id");
           Dao dao=new Dao();
-          if(id.length() > 0 || id.isEmpty()){
+          if(Integer.parseInt(id) == 0 || id.isEmpty()){
          try {
              d.setId(Integer.parseInt(id));
               int result= dao.insert(d);
