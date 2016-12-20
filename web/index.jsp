@@ -555,7 +555,7 @@ $(document).ready(function () {
                 <div class="modal-content">
                     
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <button type="button" class="close" data-dismiss="modal"  aria-hidden="true">&times;</button>
                         <h4 class="modal-title">Transaction Form</h4>
                     </div>
                     <form class="form-horizontal" action="Controller" method="post" >
@@ -564,20 +564,20 @@ $(document).ready(function () {
                        
                             <!--<input id="dbId2" type="hidden" name="id" />-->
                              <input id="dbId" type="hidden" name="id" value="<%=ID%>"/>
-                            <input type="hidden" name="name" id="appId" value="" placeholder="application name" />
-                            <input type="hidden" name="subname" id="appId2" value="<%=subname1%>" placeholder="application sub name" />
+                            <input type="text" name="name" id="appId" value="" placeholder="application name" style="height:30px;width:100px;"/>
+                            <input type="text" name="subname" id="appId2" value="<%=subname1%>" placeholder="application sub name" style="height:30px;width:240px;"/>
                             <div class="row col-xs-12"> 
                                 
                                           <div class="form-group has-warning">
                                         <label class="col-xs-6 control-label" for="inputSuccess">Rel.Month</label>
                                         <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="text" name="month" value="<%=month1%>" required/>
+                                            <input type="month" name="month" value="<%=month1%>" required style="height:30px;width:180px;"/>
                                         </div>
                                     </div>
                                          <div class="form-group has-warning">
                                         <label class="col-xs-6 control-label" for="inputSuccess">Date</label>
                                         <div class="col-xs-6" style="padding-top: 34px;">
-                                            <input type="date" name="date" value="<%=date1%>" required/>
+                                            <input type="date" name="date" value="<%=date1%>" required style="height:30px;width:180px;"/>
                                              
                                         </div>
                                     </div>
@@ -593,32 +593,32 @@ $(document).ready(function () {
                                      <div class="form-group has-success">
                                          <label class="col-xs-6 control-label" for="inputSuccess">Open equipment page</label>
                                         <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="number"  name="equipment"  min="0" max="100" step="0.1"  value="<%=equipment1%>" required style="    padding-right: 68px;" />
+                                            <input type="number"  name="equipment"  min="0" max="100" step="0.1"  value="<%=equipment1%>" required style="height:30px;width:180px;"/>
                                         </div>
                                     </div>
                                     <div class="form-group has-success">
                                         <label class="col-xs-6 control-label" for="inputSuccess">Open_Add Aisle Page</label>
                                         <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="number"  name="aisle"  min="0" max="100" step="0.1" value="<%=aisle1%>" required style="    padding-right: 68px;"/>
+                                            <input type="number"  name="aisle"  min="0" max="100" step="0.1" value="<%=aisle1%>" required style="height:30px;width:180px;"/>
                                         </div>
                                     </div>
                                       <div class="form-group has-success">
                                           <label class="col-xs-6 control-label" for="inputSuccess">Load Rack Details</label>
                                         <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="number" name="details"  min="0" max="100" step="0.1" value="<%=details1%>" required style="    padding-right: 68px;"/>
+                                            <input type="number" name="details"  min="0" max="100" step="0.1" value="<%=details1%>" required style="height:30px;width:180px;"/>
                                         </div>
                                     </div>
                                      <div class="form-group has-success">
                                          <label class="col-xs-6 control-label" for="inputSuccess">Select Path</label>
                                         <div class="col-xs-6" style="padding-top: 24px;">
-                                            <input type="number" name="datapath"  min="0" max="100" step="0.1"  value="<%=datapath1%>" required style="    padding-right: 68px;"/>
+                                            <input type="number" name="datapath"  min="0" max="100" step="0.1"  value="<%=datapath1%>" required style="height:30px;width:180px;"/>
                                         </div>
                                     </div>
                                     </div>
                       
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="reset" class="btn btn-default"   data-dismiss="modal">Clear</button>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
@@ -1365,7 +1365,11 @@ $(document).ready(function () {
     }).trigger('change');
 });
            </script>
-		
+	<script>
+function myFunction() {
+    location.reload();
+}
+</script>	
     	
   </body>
 </html>
