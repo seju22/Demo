@@ -24,13 +24,24 @@ CREATE TABLE `demo` (
   `date` varchar(20) DEFAULT NULL,
   `month` varchar(20) DEFAULT NULL,
   `name` varchar(30) DEFAULT NULL,
-  `subname` varchar(40) DEFAULT NULL,
-  `equipment` varchar(30) DEFAULT NULL,
-  `aisle` varchar(30) DEFAULT NULL,
-  `details` varchar(30) DEFAULT NULL,
-  `datapath` varchar(30) DEFAULT NULL,
+  `col1` varchar(30) DEFAULT NULL,
+  `col2` varchar(30) DEFAULT NULL,
+  `col3` varchar(30) DEFAULT NULL,
+  `col4` varchar(30) DEFAULT NULL,
+  `col5` varchar(30) DEFAULT NULL,
+  `col6` varchar(30) DEFAULT NULL,
+  `col7` varchar(30) DEFAULT NULL,
+  `col8` varchar(30) DEFAULT NULL,
+  `col9` varchar(30) DEFAULT NULL,
+  `col10` varchar(30) DEFAULT NULL,
+  `col11` varchar(30) DEFAULT NULL,
+  `col12` varchar(30) DEFAULT NULL,
+  `col13` varchar(30) DEFAULT NULL,
+  `col14` varchar(30) DEFAULT NULL,
+  `col15` varchar(30) DEFAULT NULL,
+  `col16` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

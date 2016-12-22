@@ -7,7 +7,6 @@ package com.test.controller;
  */
 
 import com.test.bean.Demo;
-
 import com.test.dao.Dao;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -19,6 +18,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -65,7 +65,7 @@ public class Controller extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
       //  processRequest(request, response);
-       
+       HttpSession session = request.getSession();
         int id=Integer.parseInt(request.getParameter("id"));
         String action=request.getParameter("action");
      Dao demo=new Dao();
@@ -74,10 +74,23 @@ public class Controller extends HttpServlet {
               
                 try {
                   Demo d=  demo.getById(id);
-                   request.setAttribute("edit", d);
-                   System.out.print("Edit Error :"+d.getAisle());;
-                   RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
-                    rd.forward(request, response);
+                  if(d.getName().equalsIgnoreCase("BGW")){
+                       session.setAttribute("edit1", d);
+                  }
+                  if(d.getName().equalsIgnoreCase("IVAPP")){
+                      session.setAttribute("edit2", d);
+                  }
+                  if(d.getName().equalsIgnoreCase("SNM")){
+                       session.setAttribute("edit3", d);
+                  }
+                  if(d.getName().equalsIgnoreCase("IPSM")){
+                      session.setAttribute("edit4", d);
+                  }
+                   //session.setAttribute("edit", d);
+//                   System.out.print("Edit Error :"+d.getAisle());;
+                   //RequestDispatcher rd=request.getRequestDispatcher("index1.jsp#3rdPage");  
+                    //rd.include(request, response);
+                   response.sendRedirect("index1.jsp#3rdPage");
                 } catch (ClassNotFoundException | SQLException ex) {
                     Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -85,7 +98,7 @@ public class Controller extends HttpServlet {
             else{
                 try {
                     demo.delete(id);
-                    RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
+                    RequestDispatcher rd=request.getRequestDispatcher("index1.jsp");  
                     rd.forward(request, response);
                 } catch (ClassNotFoundException | SQLException ex) {
                     Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
@@ -109,35 +122,43 @@ public class Controller extends HttpServlet {
       //  processRequest(request, response);
      Demo d=new Demo();
 
-      d.setDate(request.getParameter("date"));
-         System.out.println("date :"+request.getParameter("date"));
-      d.setMonth(request.getParameter("month"));
-        System.out.println("date :"+request.getParameter("month"));
-      d.setName(request.getParameter("name"));
-          System.out.println("date :"+request.getParameter("name"));
-      d.setSubname(request.getParameter("subname"));
-         System.out.println("date :"+request.getParameter("subname"));
-      d.setEquipment(request.getParameter("equipment"));
-        System.out.println("date :"+request.getParameter("equipment"));
-      d.setAisle(request.getParameter("aisle"));
-         System.out.println("date :"+request.getParameter("aisle"));
-      d.setDetails(request.getParameter("details"));
-         System.out.println("date :"+request.getParameter("details"));
-      d.setDatapath(request.getParameter("datapath"));
-       System.out.println("date :"+request.getParameter("datapath"));
+              d.setDate(request.getParameter("date"));
+                 System.out.println("date :"+request.getParameter("date"));
+              d.setMonth(request.getParameter("month"));
+                System.out.println("month :"+request.getParameter("month"));
+              d.setName(request.getParameter("name"));  
+                System.out.println("name :"+request.getParameter("name"));
+              d.setCol1(request.getParameter("col1"));
+                System.out.println("col1 :"+request.getParameter("col1"));
+              d.setCol2(request.getParameter("col2"));
+              d.setCol3(request.getParameter("col3"));
+              d.setCol4(request.getParameter("col4"));
+              d.setCol5(request.getParameter("col5"));
+              d.setCol6(request.getParameter("col6"));
+              d.setCol7(request.getParameter("col7"));
+              d.setCol8(request.getParameter("col8"));
+              d.setCol9(request.getParameter("col9"));
+              d.setCol10(request.getParameter("col10"));
+              d.setCol11(request.getParameter("col11"));
+              d.setCol12(request.getParameter("col12"));
+              d.setCol13(request.getParameter("col13"));
+              d.setCol14(request.getParameter("col14"));
+              d.setCol15(request.getParameter("col15"));
+              d.setCol16(request.getParameter("col16"));
+
     System.out.println("id is :"+request.getParameter("id"));
     String id = request.getParameter("id");
           Dao dao=new Dao();
-          if(Integer.parseInt(id) == 0 || id.isEmpty()){
+          if( id == null || id.isEmpty()){
          try {
-             d.setId(Integer.parseInt(id));
+             //d.setId(Integer.parseInt(id));
               int result= dao.insert(d);
              System.out.print("result"+result);
             
          } catch (ClassNotFoundException | SQLException ex) {
              Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
          }
-         response.sendRedirect("index.jsp#4thPage");
+         response.sendRedirect("index1.jsp#4thPage");
 //         RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
 //                rd.forward(request, response);
           }else{
@@ -148,7 +169,7 @@ public class Controller extends HttpServlet {
          } catch (ClassNotFoundException | SQLException ex) {
              Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
          }
-         response.sendRedirect("index.jsp#4thPage");
+         response.sendRedirect("index1.jsp#4thPage");
 //               RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
 //                rd.forward(request, response);
           }
